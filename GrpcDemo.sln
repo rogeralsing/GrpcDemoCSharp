@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "GrpcClient.csproj", "{5D9ED5C9-355E-4684-8065-7CFDD23463D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{5D9ED5C9-355E-4684-8065-7CFDD23463D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "..\GrpcServer\GrpcServer.csproj", "{E37A34DD-C514-4796-8F93-FCFD845E481C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcServer", "GrpcServer\GrpcServer.csproj", "{E37A34DD-C514-4796-8F93-FCFD845E481C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcContracts", "..\GrpcContracts\GrpcContracts.csproj", "{477B80C2-5696-4EFD-93EE-71AB1804F688}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcContracts", "GrpcContracts\GrpcContracts.csproj", "{477B80C2-5696-4EFD-93EE-71AB1804F688}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
