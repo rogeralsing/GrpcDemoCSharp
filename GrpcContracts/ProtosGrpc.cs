@@ -55,6 +55,13 @@ namespace Helloworld {
         __Marshaller_HelloRequest,
         __Marshaller_HelloReply);
 
+    static readonly Method<global::Helloworld.HelloRequest, global::Helloworld.HelloReply> __Method_SayHelloStream = new Method<global::Helloworld.HelloRequest, global::Helloworld.HelloReply>(
+        MethodType.ClientStreaming,
+        __ServiceName,
+        "SayHelloStream",
+        __Marshaller_HelloRequest,
+        __Marshaller_HelloReply);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -68,6 +75,11 @@ namespace Helloworld {
       ///  Sends a greeting
       /// </summary>
       public virtual global::System.Threading.Tasks.Task<global::Helloworld.HelloReply> SayHello(global::Helloworld.HelloRequest request, ServerCallContext context)
+      {
+        throw new RpcException(new Status(StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Helloworld.HelloReply> SayHelloStream(IAsyncStreamReader<global::Helloworld.HelloRequest> requestStream, ServerCallContext context)
       {
         throw new RpcException(new Status(StatusCode.Unimplemented, ""));
       }
@@ -125,6 +137,14 @@ namespace Helloworld {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
       }
+      public virtual AsyncClientStreamingCall<global::Helloworld.HelloRequest, global::Helloworld.HelloReply> SayHelloStream(Metadata headers = null, DateTime? deadline = null, CancellationToken cancellationToken = default(CancellationToken))
+      {
+        return SayHelloStream(new CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual AsyncClientStreamingCall<global::Helloworld.HelloRequest, global::Helloworld.HelloReply> SayHelloStream(CallOptions options)
+      {
+        return CallInvoker.AsyncClientStreamingCall(__Method_SayHelloStream, null, options);
+      }
       protected override GreeterClient NewInstance(ClientBaseConfiguration configuration)
       {
         return new GreeterClient(configuration);
@@ -135,7 +155,8 @@ namespace Helloworld {
     public static ServerServiceDefinition BindService(GreeterBase serviceImpl)
     {
       return ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();
+          .AddMethod(__Method_SayHello, serviceImpl.SayHello)
+          .AddMethod(__Method_SayHelloStream, serviceImpl.SayHelloStream).Build();
     }
 
   }

@@ -23,9 +23,11 @@ namespace Helloworld {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CgxQcm90b3MucHJvdG8SCmhlbGxvd29ybGQiHAoMSGVsbG9SZXF1ZXN0EgwK",
-            "BG5hbWUYASABKAkiHQoKSGVsbG9SZXBseRIPCgdtZXNzYWdlGAEgASgJMkkK",
-            "B0dyZWV0ZXISPgoIU2F5SGVsbG8SGC5oZWxsb3dvcmxkLkhlbGxvUmVxdWVz",
-            "dBoWLmhlbGxvd29ybGQuSGVsbG9SZXBseSIAQgaiAgNITFdiBnByb3RvMw=="));
+            "BG5hbWUYASABKAkiHQoKSGVsbG9SZXBseRIPCgdtZXNzYWdlGAEgASgJMpEB",
+            "CgdHcmVldGVyEj4KCFNheUhlbGxvEhguaGVsbG93b3JsZC5IZWxsb1JlcXVl",
+            "c3QaFi5oZWxsb3dvcmxkLkhlbGxvUmVwbHkiABJGCg5TYXlIZWxsb1N0cmVh",
+            "bRIYLmhlbGxvd29ybGQuSGVsbG9SZXF1ZXN0GhYuaGVsbG93b3JsZC5IZWxs",
+            "b1JlcGx5IgAoAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
