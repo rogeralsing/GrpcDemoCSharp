@@ -31,14 +31,17 @@ namespace GrpcServer
             Server server = new Server
             {                
                 Services = { Greeter.BindService(new GreeterImpl()) },
-                Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }                
+                Ports = { new ServerPort("0.0.0.0", Port, ServerCredentials.Insecure) }
             };
-            server.Start();
+            server.Start();			
 
             Console.WriteLine("Greeter server listening on port " + Port);
-            Console.WriteLine("Press any key to stop the server...");
-            Console.ReadKey();
+			//Console.WriteLine("Press any key to stop the server...");
+			//Console.ReadKey();
 
+			System.Threading.Thread.Sleep(30000);
+
+			Console.WriteLine("Server is shutting down..");
             server.ShutdownAsync().Wait();
         }
     }

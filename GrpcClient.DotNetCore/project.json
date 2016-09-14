@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "compile": {
+      "includeFiles": [
+        "..\\GrpcClient\\Program.cs"
+      ]
+    }
+  },
+
+  "dependencies": {
+    "GrpcContracts.DotNetCore": "1.0.0-*",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0"
+    }
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": "dnxcore50"
+    }
+  },
+
+  "runtimes": {
+    "debian.8-x64": {},
+    "win10-x64": {}
+  }
+}

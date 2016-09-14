@@ -1,0 +1,3 @@
+﻿docker build -t 'my/grpcclient' .
+
+docker run --rm --link server1:server my/grpcclient dotnet GrpcClient.DotNetCore.dll server:50051

@@ -1,0 +1,3 @@
+﻿docker build -t 'my/grpcserver' .
+
+docker run --rm --name server1 -p 50051:50051 my/grpcserver

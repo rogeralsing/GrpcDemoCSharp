@@ -1,0 +1,25 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "Google.Protobuf": "3.0.0",
+    "NETStandard.Library": "1.6.0",
+    "X.Grpc": "1.1.0-dev-20160831",
+    "X.Grpc.Core": "1.1.0-dev-20160831"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+
+  "buildOptions": {    
+    "compile": {
+      "includeFiles": [
+        "..\\GrpcContracts\\Protos.g.cs",
+        "..\\GrpcContracts\\ProtosGrpc.cs"
+      ]
+    }
+  }
+}

@@ -17,7 +17,13 @@ namespace GrpcClient
         {
             Thread.Sleep(2000); //just wait for server to start
 
-            Channel channel = new Channel("127.0.0.1:50051", ChannelCredentials.Insecure);
+			var server = "127.0.0.1:50051";
+			if (args.Length > 0)
+			{
+				server = args[0];
+			}
+
+			Channel channel = new Channel(server, ChannelCredentials.Insecure);
             
             var client = new Greeter.GreeterClient(channel);
 
@@ -54,7 +60,8 @@ namespace GrpcClient
             Console.WriteLine(sw.Elapsed);
 
             channel.ShutdownAsync().Wait();
-            Console.ReadKey();
+			Console.WriteLine("Done.");
+            //Console.ReadKey();
         }
     }
 }
